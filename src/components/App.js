@@ -4,7 +4,7 @@ import InputBarContainer from '../container/inputBarContainer'
 import TodoListContainer from '../container/todoListContainer'
 import Grid from '@material-ui/core/Grid'
 import Divider from '@material-ui/core/Divider'
-import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles'
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 
 const theme = createMuiTheme({
     palette: {
@@ -29,7 +29,7 @@ const App = () => {
         <div className = "App">
         <Grid container direction = "column" spacing = {3} justify = "center">
             <Grid item xs = {12} ><InputBarContainer /></Grid>
-            <Divider color = "secondary" variant = "fullWidth"/>
+            <Divider variant = "fullWidth"/>
             <Grid item xs = {12} ><TodoListContainer /></Grid>
         </Grid>
     </div>

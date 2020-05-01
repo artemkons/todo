@@ -1,5 +1,4 @@
 import React from 'react'
-import TodoItem from './TodoItem'
 import TodoItemContainer from '../container/ToDoItemContainer' 
 
 import Grid from '@material-ui/core/Grid'
