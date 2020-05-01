@@ -34,7 +34,7 @@ const TodoItem = ({text, id, complete, onClick}) => {
             <CardContent>
                 <FormControl fullWidth>
                     <FormControlLabel
-                        control = { <Checkbox value = {checked} onChange = { handleChange } /> }
+                        control = { <Checkbox checked = { complete } onChange = { handleChange } /> }
                         label = { <Typography className = { complete ? classes.completed : classes.default }> {text} </Typography> }
                     />
                 </FormControl>
