@@ -1,10 +1,11 @@
-import { ADD_TODO, CLOSE_TODO, COMPLETE_TODO } from "../actionType"
+import { ADD_TODO, CLOSE_TODO, COMPLETE_TODO, FILTER, CHANGE_FILTER} from "../actionType"
 
 
 const initialState = {
     todos: [
         {text:"JOPA", id:0, complete: false}
-    ]
+    ],
+    currentfilter: FILTER.ALL,
 }
 
 function todoApp(state = initialState, action){
@@ -31,6 +32,10 @@ function todoApp(state = initialState, action){
                     }
                         return element;
                 })
+            })
+        case CHANGE_FILTER:
+            return ({...state,
+                currentfilter: action.filter
             })
     }
     

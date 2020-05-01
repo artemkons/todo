@@ -1,4 +1,4 @@
-import { ADD_TODO, CLOSE_TODO, COMPLETE_TODO } from './actionType'
+import { ADD_TODO, CLOSE_TODO, COMPLETE_TODO, CHANGE_FILTER } from './actionType'
 
 let nextid = 1
 export const addTodo = (text) => {
@@ -20,5 +20,12 @@ export const completeTodo = (id) => {
     return {
         type: COMPLETE_TODO,
         id
+    }
+}
+
+export const changeFilter = (filter) => {
+    return {
+        type: CHANGE_FILTER,
+        filter
     }
 }

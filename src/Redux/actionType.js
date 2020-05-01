@@ -1,3 +1,9 @@
 export const ADD_TODO = "ADD_TODO"
 export const CLOSE_TODO = "CLOSE_TODO"
 export const COMPLETE_TODO = "COMPLETE_TODO"
+export const CHANGE_FILTER = "CHANGE_FILTER"
+export const FILTER = {
+    ALL:"ALL",
+    COMPLETED: "COMPLETED",
+    UNCOMPLETED: "UNCOMPLETED"
+}

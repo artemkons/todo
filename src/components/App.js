@@ -2,6 +2,8 @@ import React from 'react'
 
 import InputBarContainer from '../container/inputBarContainer'
 import TodoListContainer from '../container/todoListContainer'
+import FooterContainer from '../container/FooterContainer'
+
 import Grid from '@material-ui/core/Grid'
 import Divider from '@material-ui/core/Divider'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
@@ -30,6 +32,8 @@ const App = () => {
             <Grid item xs = {12} ><InputBarContainer /></Grid>
             <Divider variant = "fullWidth"/>
             <Grid item xs = {12} ><TodoListContainer /></Grid>
+            <Divider variant = "fullWidth"/>
+            <Grid item xs = {12} > <FooterContainer/> </Grid>
         </Grid>
     </ThemeProvider>
 }
