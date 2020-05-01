@@ -8,6 +8,9 @@ import { makeStyles } from '@material-ui/core/styles'
 import Grid from "@material-ui/core/Grid"
 import Checkbox from '@material-ui/core/Checkbox'
 
+import FormControl from '@material-ui/core/FormControl'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
+
 const useStyles = makeStyles({
     default: {
 
@@ -18,20 +21,28 @@ const useStyles = makeStyles({
 })
 
 const TodoItem = ({text, id, complete, onClick}) => {
-    const [checked,setChecked] = React.useState(complete)
+    const [checked, setChecked] = React.useState(complete)
     const classes = useStyles()
-    
-    return <Grid item xs = {12}>
-    <Card variant = "outlined" onClick = { ev => {
+
+    const handleChange = () => {
         setChecked(!checked)
-        console.log(checked)
-        onClick(id)}}>
-        <CardContent>
-            <Checkbox value = { checked }/>
-            <Typography className = { complete ? classes.completed : classes.default } component = "span"  variant = "body1"> { text } </Typography>
-        </CardContent>
-    </Card>
+        onClick(id)
+    }
+
+    return <Grid item xs = {12}>
+        <Card variant = "outlined">
+            <CardContent>
+                <FormControl fullWidth>
+                    <FormControlLabel
+                        control = { <Checkbox value = {checked} onChange = { handleChange } /> }
+                        label = { <Typography className = { complete ? classes.completed : classes.default }> {text} </Typography> }
+                    />
+                </FormControl>
+            </CardContent>
+        </Card>
+
     </Grid>
 }
+
 
 export default TodoItem

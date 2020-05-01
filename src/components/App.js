@@ -26,13 +26,11 @@ const theme = createMuiTheme({
 const App = () => {
    
     return <ThemeProvider theme = { theme }>
-        <div className = "App">
         <Grid container direction = "column" spacing = {3} justify = "center">
             <Grid item xs = {12} ><InputBarContainer /></Grid>
             <Divider variant = "fullWidth"/>
             <Grid item xs = {12} ><TodoListContainer /></Grid>
         </Grid>
-    </div>
     </ThemeProvider>
 }
 

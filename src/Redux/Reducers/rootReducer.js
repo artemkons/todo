@@ -26,8 +26,9 @@ function todoApp(state = initialState, action){
         case COMPLETE_TODO:
             return ({...state,
                 todos: state.todos.map( function(element){
-                    if(element.id === action.id)    element.complete = !element.complete;
-                    
+                    if(element.id === action.id){    
+                        element.complete = !element.complete;
+                    }
                         return element;
                 })
             })
